@@ -18,7 +18,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <com.example.android.mygarden.ui.WaterLevelView
+    <com.arunditti.android.mygardenapp.ui.WaterLevelView
         android:id="@+id/water_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

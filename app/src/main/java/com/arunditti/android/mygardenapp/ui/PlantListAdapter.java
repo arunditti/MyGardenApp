@@ -120,6 +120,5 @@ public class PlantListAdapter extends RecyclerView.Adapter<PlantListAdapter.Plan
             plantImageView = (ImageView) itemView.findViewById(R.id.plant_list_item_image);
             plantNameView = (TextView) itemView.findViewById(R.id.plant_list_item_name);
         }
-
     }
 }
