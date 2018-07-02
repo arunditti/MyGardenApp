@@ -86,7 +86,6 @@ public class MainActivity
         startActivity(intent);
     }
 
-
     public void onAddFabClick(View view) {
         Intent intent = new Intent(this, AddPlantActivity.class);
         startActivity(intent);

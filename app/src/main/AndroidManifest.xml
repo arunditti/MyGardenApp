@@ -9,26 +9,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <provider
             android:name=".provider.PlantContentProvider"
             android:authorities="com.arunditti.android.mygardenapp"
             android:exported="true" />
 
-        <activity android:name=".ui.MainActivity"
+        <activity
+            android:name=".ui.MainActivity"
             android:label="@string/title_activity_my_garden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ui.AddPlantActivity"
+        <activity
+            android:name=".ui.AddPlantActivity"
             android:label="@string/title_activity_plant_detail" />
-
-        <activity android:name=".ui.PlantDetailActivity"
+        <activity
+            android:name=".ui.PlantDetailActivity"
             android:label="@string/title_activity_add_plant" />
 
+        <receiver android:name=".PlantWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/plant_widget_provider_info" />
+        </receiver>
+
+        <service
+            android:name=".PlantWateringService"
+            android:exported="false"></service>
     </application>
 
 </manifest>
